@@ -59,8 +59,10 @@ const Login = () => {
       ApiMethods.post,
       requestBody
     );
-    if (result.status === 200) {
+    if (result.success) {
       changeToOtpForm();
+    } else {
+      alert(result.message);
     }
   };
 
@@ -74,8 +76,10 @@ const Login = () => {
       ApiMethods.post,
       requestBody
     );
-    if (result.status === 200) {
+    if (result.success) {
       navigate("/");
+    } else {
+      alert(result.message);
     }
   };
 

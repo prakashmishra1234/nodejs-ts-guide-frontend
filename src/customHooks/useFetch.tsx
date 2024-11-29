@@ -17,10 +17,10 @@ const useFetch = () => {
         data: requestBody,
       });
       setLoading(false);
-      return { data: res.data, status: res.status };
-    } catch (error) {
+      return { ...res.data, status: res.status };
+    } catch (error: any) {
       setLoading(false);
-      return error;
+      return { ...error.response.data, status: error.status };
     }
   };
   return { loading, fetchData };
