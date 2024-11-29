@@ -56,5 +56,10 @@
     "@types/react-swipeable-views": "^0.13.5",
     "i": "^0.3.7",
     "npm": "^10.9.0"
+  },
+  "overrides": {
+    "react-swipeable-views": {
+      "react": "^18.3.1"
+    }
   }
 }
